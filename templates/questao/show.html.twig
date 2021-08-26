@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Questoes{% endblock %}
+
+{% block body %}
+    <h1>Questoes</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id da questao</th>
+                <td>{{ tbquestao.idquestao }}</td>
+            </tr>
+            <tr>
+                <th>Questao</th>
+                <td>{{ tbquestao.questao }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('questao_index') }}">back to list</a>
+
+    <a href="{{ path('questao_edit', {'idquestao': tbquestao.idquestao}) }}">edit</a>
+
+    {{ include('questao/_delete_form.html.twig') }}
+{% endblock %}

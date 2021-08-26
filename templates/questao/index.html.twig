@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Questoes{% endblock %}
+
+{% block body %}
+    <h1>Questoes</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id Questao</th>
+                <th>Questao</th>
+                <th>Acoes</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tbquestao in tbquestaos %}
+            <tr>
+                <td>{{ tbquestao.idquestao }}</td>
+                <td>{{ tbquestao.questao }}</td>
+                <td>
+                    <a href="{{ path('questao_show', {'idquestao': tbquestao.idquestao}) }}">Mostrar</a>
+                    <a href="{{ path('questao_edit', {'idquestao': tbquestao.idquestao}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Lista vazia</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('questao_new') }}">Criar novo</a>
+{% endblock %}

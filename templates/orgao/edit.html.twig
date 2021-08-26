@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Orgao{% endblock %}
+
+{% block body %}
+    <h1>Editar Orgao</h1>
+
+    {{ include('orgao/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('orgao_index') }}">Voltar para lista</a>
+
+    {{ include('orgao/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nova questao{% endblock %}
+
+{% block body %}
+    <h1>Criar nova questao</h1>
+
+    {{ include('questao/_form.html.twig') }}
+
+    <a href="{{ path('questao_index') }}">Voltar para lista</a>
+{% endblock %}

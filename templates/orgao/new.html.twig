@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Novo Orgao{% endblock %}
+
+{% block body %}
+    <h1>Criar novo Orgao</h1>
+
+    {{ include('orgao/_form.html.twig') }}
+
+    <a href="{{ path('orgao_index') }}">Voltar para lista</a>
+{% endblock %}

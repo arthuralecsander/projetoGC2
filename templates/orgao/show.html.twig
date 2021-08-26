@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Orgaos{% endblock %}
+
+{% block body %}
+    <h1>Orgao</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id Orgao</th>
+                <td>{{ tborgao.idorgao }}</td>
+            </tr>
+            <tr>
+                <th>Nome orgao</th>
+                <td>{{ tborgao.nomeorgao }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('orgao_index') }}">Voltar para lista</a>
+
+    <a href="{{ path('orgao_edit', {'idorgao': tborgao.idorgao}) }}">edit</a>
+
+    {{ include('orgao/_delete_form.html.twig') }}
+{% endblock %}

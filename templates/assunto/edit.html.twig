@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Assunto{% endblock %}
+
+{% block body %}
+    <h1>Editar Assunto</h1>
+
+    {{ include('assunto/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('assunto_index') }}">Voltar para lista</a>
+
+    {{ include('assunto/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Questao{% endblock %}
+
+{% block body %}
+    <h1>Editar Questao</h1>
+
+    {{ include('questao/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('questao_index') }}">Voltar para lista</a>
+
+    {{ include('questao/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Assuntos{% endblock %}
+
+{% block body %}
+    <h1>Assuntos</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id Assunto</th>
+                <th>Assunto</th>
+                <th>Acoes</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tbassunto in tbassuntos %}
+            <tr>
+                <td>{{ tbassunto.idassunto }}</td>
+                <td>{{ tbassunto.assunto }}</td>
+                <td>
+                    <a href="{{ path('assunto_show', {'idassunto': tbassunto.idassunto}) }}">Mostrar</a>
+                    <a href="{{ path('assunto_edit', {'idassunto': tbassunto.idassunto}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Lista vazia</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('assunto_new') }}">Criar Novo</a>
+{% endblock %}

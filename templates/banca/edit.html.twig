@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Banca{% endblock %}
+
+{% block body %}
+    <h1>Editar Banca</h1>
+
+    {{ include('banca/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('banca_index') }}">Voltar para lista</a>
+
+    {{ include('banca/_delete_form.html.twig') }}
+{% endblock %}
