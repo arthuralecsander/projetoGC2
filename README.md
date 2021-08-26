@@ -25,6 +25,10 @@ Instale as dependencias do npm
 
     npm install
 
+Caso necessario rode uma nova build
+
+    npm run dev
+
 Execute o servidor do projeto:
 
     symfony serve -d
@@ -34,6 +38,7 @@ O link estara disponivel na URL
 Url
 
     "https://127.0.0.1:8000/"
+
 
 #Cruds disponiveis
 
