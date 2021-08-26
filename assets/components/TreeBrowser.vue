@@ -9,7 +9,8 @@
       >
         <span class="type">&#9671;</span>
         <span>{{ node.name }}</span>
-        <span class="qnt">{{node.qnt}}</span>
+        <span v-if="node.qnt"class="qnt">{{node.qnt}} questoes</span>
+
         <TreeBrowser
             v-if="node.children"
             :nodes="node.children"
@@ -48,9 +49,7 @@ export default {
   text-align: left;
   font-size: 18px;
 }
-.qnt {
-  margin-left: 10px;
-}
+
 .type {
   margin-right: 10px;
 }

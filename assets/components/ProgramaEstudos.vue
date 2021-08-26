@@ -1,28 +1,26 @@
 <template>
   <div>
     <h2>Filtros</h2>
-    <form id="form">
-      <select
-          v-model="modelBanca"
-          id="selectBanca">
-        <option value="0"> Selecione uma Banca</option>
-        <option
-            v-for="banca in listaBancas"
-            v-bind:value="banca.id">{{ banca.banca }}</option>
-      </select>
-      <select
-          v-model="modelOrgao"
-          id="selectOrgao">
-        <option value="0"> Selecione um Orgao</option>
-        <option
-            v-for="orgao in listaOrgaos"
-            v-bind:value="orgao.id">{{ orgao.orgao }}</option>
-      </select>
-      <button type="button" class="btn btn-primary" v-on:click="filtro">
-        Filtro
-      </button>
-    </form>
 
+    <select
+        v-model="modelBanca"
+        id="selectBanca">
+      <option value="0"> Selecione uma Banca</option>
+      <option
+          v-for="banca in listaBancas"
+          v-bind:value="banca.id">{{ banca.banca }}</option>
+    </select>
+    <select
+        v-model="modelOrgao"
+        id="selectOrgao">
+      <option value="0"> Selecione um Orgao</option>
+      <option
+          v-for="orgao in listaOrgaos"
+          v-bind:value="orgao.id">{{ orgao.orgao }}</option>
+    </select>
+    <button type="button" class="btn btn-primary" v-on:click="filtro">
+      Buscar
+    </button>
     <div id="app">
       <h2>Lista</h2>
       <TreeBrowser
@@ -78,7 +76,6 @@ export default {
     TreeBrowser,
   },
   name: 'Prog',
-
 };
 
 </script>
